@@ -70,26 +70,6 @@ describe("DashboardView Tests", () => {
     // Check "How It Works" section
     expect(screen.getByText("How it Works")).toBeInTheDocument();
     expect(screen.getByAltText("How it works")).toBeInTheDocument();
-
-    // Check "Meet the Team" section
-    expect(screen.getByText("Meet the Team")).toBeInTheDocument();
-  });
-
-  // Test Case 1.3: Verify all team members are displayed correctly
-  test("renders all team members correctly", () => {
-    render(
-      <Router>
-        <DashboardView />
-      </Router>
-    );
-
-    // Check if all team members are rendered
-    expect(screen.getByText("Miri Kim")).toBeInTheDocument();
-    expect(screen.getByText("Riya Sharma")).toBeInTheDocument();
-    expect(screen.getByText("Martin Liu")).toBeInTheDocument();
-    expect(screen.getByText("Mariem Ouertatani")).toBeInTheDocument();
-    expect(screen.getByText("Diba Jamali")).toBeInTheDocument();
-    expect(screen.getByText("Stephenie Oboh")).toBeInTheDocument();
   });
 
   // Test Case 2.1: Verify clicking the "Plan your next event now" link navigates to the chatbot page

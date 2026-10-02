@@ -63,8 +63,9 @@
   border-radius: 10px;
 }
 
-/* Bottom Left: How It Works */
+/* Bottom: How It Works (spans both columns) */
 .homepage-container .homepage-how-it-works {
+  grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
 }
@@ -99,74 +100,11 @@
   color: #5a189a;
 }
 
-/* Bottom Right: Meet the Team */
-.homepage-container .homepage-team {
-  display: flex;
-  flex-direction: column;
-}
-
-.homepage-container .team-header {
-  font-family: "Merriweather", serif;
-  font-size: 36px;
-  color: #5a189a;
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.homepage-container .team-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.homepage-container .team-member-card {
-  background: #f7e8d7;
-  padding: 20px;
-  border-radius: 10px;
-  border: 0.5px ridge #5a189a;
-}
-
-.homepage-container .card-top {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 15px;
-}
-
-.homepage-container .member-image {
-  width: 60px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.homepage-container .member-info {
-  flex: 1;
-}
-
-.homepage-container .member-info h4 {
-  font-family: "Lato", sans-serif;
-  font-size: 16px;
-  color: #5a189a;
-  margin: 5px;
-}
-
-.homepage-container .member-info p {
-  font-size: 14px;
-  color: #5a189a;
-  margin: 5px;
-}
-
-.homepage-container .member-description {
-  font-size: 16px;
-  color: #5a189a;
-  text-align: left;
-  margin: 0;
-}
-
 /* Responsive Design */
 @media (max-width: 900px) {
   .homepage-container {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto;
     gap: 0;
     height: auto;
     text-align: center;
@@ -181,9 +119,5 @@
     grid-row: 1;
     padding: 0;
     margin: 0;
-  }
-
-  .homepage-container .team-grid {
-    grid-template-columns: 1fr;
   }
 }
