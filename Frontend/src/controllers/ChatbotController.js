@@ -22,11 +22,11 @@ export const chatbotController = {
   },
 };
 
-// Helper function
-function aiSuggestionsToArray(text) {
+// Helper function: works whether the AI puts each option on its own line or all on one line
+export function aiSuggestionsToArray(text) {
   return text
-    .split("\n")
-    .filter((line) => /\s*-\s*Option\s*\d+:/.test(line))
-    .map((line) => line.replace(/.*-\s*Option\s*\d+:\s*/, "").trim())
+    .split(/\s*-?\s*Option\s*\d+:\s*/i)
+    .slice(1)
+    .map((part) => part.trim().replace(/[,;]$/, "").trim())
     .filter(Boolean);
 }

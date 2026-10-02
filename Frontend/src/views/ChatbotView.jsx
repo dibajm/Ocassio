@@ -106,10 +106,10 @@ const ChatbotView = () => {
       }
 
       let extractedSuggestions = [];
-      // Key change: Loop until suggestions are extracted
-      while (extractedSuggestions.length < minNumberOfSuggestions) {
+      // Retry until suggestions are extracted, but give up after a few tries so the chat never hangs
+      for (let attempt = 0; attempt < 3 && extractedSuggestions.length < minNumberOfSuggestions; attempt++) {
+        if (attempt > 0) await delay(1000);
         extractedSuggestions = await chatbotController.getSuggestions(contextText, questions[currentQuestion]);
-        delay(1000);
       }
 
       setSuggestions(extractedSuggestions);
