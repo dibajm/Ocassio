@@ -19,18 +19,18 @@ ${question}
 Please provide exactly 3 suggestions in the following format:
 - Option 1: [suggestion]`;
 
-    const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
+    const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
+    // Groq's free tier needs no credit card; set AI_MODEL in .env to switch models
     const response = await axios.post(
-      "https://openrouter.ai/api/v1/chat/completions",
+      "https://api.groq.com/openai/v1/chat/completions",
       {
-        model: "mistralai/mistral-small-3.1-24b-instruct:free",
-        models: ["deepseek/deepseek-r1-zero:free", "rekaai/reka-flash-3:free"],
+        model: process.env.AI_MODEL || "openai/gpt-oss-20b",
         messages: [{ role: "user", content: prompt }],
       },
       {
         headers: {
-          Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+          Authorization: `Bearer ${GROQ_API_KEY}`,
           "Content-Type": "application/json",
         },
       }
@@ -52,11 +52,11 @@ Please provide exactly 3 suggestions in the following format:
 module.exports = router;
 
 /**
- * This module defines the API route for generating event planning suggestions using OpenRouter AI.
+ * This module defines the API route for generating event planning suggestions using Groq AI.
  * It allows users to receive AI-generated suggestions for event-related queries in a structured format.
  *
  * - `express.Router()`: Creates a new router instance for handling AI suggestion requests.
- * - `axios`: Used to send requests to the OpenRouter AI API.
+ * - `axios`: Used to send requests to the Groq AI API.
  * - `dotenv`: Ensures environment variables (such as API keys) are properly loaded.
  *
  * ## Route:
@@ -65,7 +65,7 @@ module.exports = router;
  * - Expects a `context` (event details) and a `question` (user query) in the request body.
  * - Constructs a structured prompt for the AI model to generate exactly **three suggestions**.
  * - Ensures that each suggestion is **limited to a maximum of two sentences** to prevent excessive response length.
- * - Calls OpenRouter AI’s API using the `"rekaai/reka-flash-3:free"` model.
+ * - Calls Groq's API using the `openai/gpt-oss-20b` model (override with `AI_MODEL`).
  * - Returns the AI-generated suggestions in a structured JSON response.
  *
  * ## Error Handling:

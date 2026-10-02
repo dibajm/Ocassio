@@ -3,12 +3,12 @@ import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCp2YZ6QAYtkYAt3K_wQm7sDhARvUEXUDg',
-  authDomain: 'occasio-1836c.firebaseapp.com',
-  projectId: 'occasio-1836c',
-  storageBucket: 'occasio-1836c.firebasestorage.app',
-  messagingSenderId: '796666396948',
-  appId: '1:796666396948:web:da2160dd0c32fec8810201',
+  apiKey: 'AIzaSyCf8OvIPrVWMilWXXvCER2S475PV4IF8dM',
+  authDomain: 'ocassio-7d106.firebaseapp.com',
+  projectId: 'ocassio-7d106',
+  storageBucket: 'ocassio-7d106.firebasestorage.app',
+  messagingSenderId: '473221676990',
+  appId: '1:473221676990:web:98a46f048f0ed443ab83ef',
 };
 
 const app = initializeApp(firebaseConfig);
