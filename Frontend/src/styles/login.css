@@ -1,0 +1,147 @@
+.login-page {
+  background-color: #f9f4eb;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.login-page .login-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  max-width: 1000px;
+  width: 90%;
+}
+
+.login-page h2 {
+  color: #5A189A;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: left;
+  font-family: 'Merriweather', serif;
+}
+
+.login-page .auth-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+  width: 100%;
+  padding: 20px;
+  background: none;
+  box-shadow: none;
+  position: relative;
+}
+
+.login-page .auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-page label {
+  font-weight: 500;
+}
+
+/* Input fields styling */
+.login-page input[type="email"],
+.login-page input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #D72638;
+  background: #F7E8D7;
+  outline: none;
+  color: #D72638;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.login-page input[type="email"]:focus,
+.login-page input[type="password"]:focus {
+  border-color: #5A189A;
+}
+
+/* Login button */
+.login-page button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #D72638;
+  border: none;
+  color: #f8f1e5;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 130px;
+  margin: 0;
+}
+
+.login-page button:hover {
+  background-color: #b71c2c;
+}
+
+.login-page input::placeholder {
+  color: #D72638;
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 1;
+}
+
+/* Auth buttons container */
+.login-page .auth-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-top: 12px;
+  padding: 0%;
+  width: 100%;
+  gap: 30px;
+}
+
+/* Login image styling */
+.login-page .login-image {
+  width: 250px;
+  height: auto;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .login-page .login-wrapper {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 8% 0 0;
+  }
+
+  .login-page .login-image {
+    display: none;
+  }
+
+  .login-page .auth-container {
+    margin: 20px 0;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-page h2 {
+    font-size: 24px;
+  }
+
+  .login-page input[type="email"],
+  .login-page input[type="password"] {
+    font-size: 14px;
+  }
+
+  .login-page button {
+    font-size: 14px;
+  }
+  .login-image{
+    display: none; 
+  }
+}

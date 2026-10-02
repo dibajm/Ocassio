@@ -1,0 +1,175 @@
+  /* General Styles */
+  .invitation-box {
+    max-width: 450px;
+    margin: auto;
+    padding: 50px;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .divider {
+    border-width: 0.5px;
+    margin: 20px 0;
+    border-top: 1px solid #ccc;
+  }
+
+  /* Whimsical Styles */
+  .whimsical-box {
+    font-family: 'Times New Roman', serif;
+    background-color: #fefdf6;
+    color: #43634e;
+    border: 1px solid #e3dec6;
+    padding: 50px;
+  }
+
+  .whimsical-sub {
+    color: #64836f;
+    font-size: 20px;
+  }
+
+  .whimsical-text {
+    color: #64836f;
+    font-size: 16px;
+  }
+
+  .whimsical-footer {
+    color: #64836f;
+    font-size: 12px;
+  }
+
+  /* Classic Styles */
+  .classic-box {
+    font-family: 'Georgia', serif;
+    background-color: #fff7f3;
+    color: #d16a6a;
+    border: 1px solid #e4d7d3;
+    padding: 50px;
+  }
+
+  .classic-sub {
+    color: #8a6d6d;
+    font-size: 20px;
+  }
+
+  .classic-text {
+    color: #8a6d6d;
+    font-size: 16px;
+  }
+
+  .classic-footer {
+    color: #8a6d6d;
+    font-size: 12px;
+  }
+
+  /* Professional Styles */
+  .professional-box {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #2172ec;
+    border: 1px solid #dcdcdc;
+    padding: 50px;
+  }
+
+  .professional-sub {
+    color: #555;
+    font-size: 20px;
+  }
+
+  .professional-text {
+    color: #555;
+    font-size: 16px;
+  }
+
+  .professional-footer {
+    color: #9c9c9c;
+    font-size: 12px;
+  }
+
+  /* Fun Styles */
+  .fun-box {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #cd645c;
+    border: 1.5px solid #EB726A;
+    padding: 50px;
+  }
+
+  .fun-sub {
+    color: #555;
+    font-size: 20px;
+  }
+
+  .fun-text {
+    color: #555;
+    font-size: 16px;
+  }
+
+  .fun-footer {
+    color: #555;
+    font-size: 12px;
+  }
+
+  .invitation-box h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  
+  .invitation-box .divider {
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+  }
+  
+  .invitation-page-container {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: #F8F1E5;
+    padding: 8% 16% 1% 16%;
+    min-height: 60vh;
+  }
+
+  .invitation-footer {
+    font-style: italic;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .invitation-page-container .left-page {
+    text-align: left;
+    margin-right: 50px;
+  }
+
+  .invitation-page-container .left-page h1 {
+    font-family: 'Merriweather', serif;
+    color: #5A189A;
+    font-weight: bold;
+  }
+
+  .invitation-page-container .left-page label {
+    color:#D72638;
+    font-weight: bold;
+  }
+  
+  #style-select {
+    padding: 8px;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 6px;
+    border: solid 1px #ECC5BF;
+    color:#D72638;
+    margin: 10px 0;
+    background-color: #F7E8D7;
+  }
+
+  /* Responsive Design */
+  @media only screen and (max-width: 900px) {
+    .invitation-page-container {
+      padding: 10% 8% 1% 8%;
+      flex-direction: column;
+    }
+
+    .invitation-box {
+      margin: 10px 0 40px 0;
+    }
+  }
