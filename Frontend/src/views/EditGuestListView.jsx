@@ -14,6 +14,7 @@ const EditGuestListView = () => {
 
   useEffect(() => {
     fetchGuests();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [eventId]);
 
   const fetchGuests = async () => {

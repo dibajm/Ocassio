@@ -5,4 +5,9 @@ const PORT = process.env.PORT || 3001;
 
 console.log(`IS_LOADED: ${process.env.IS_LOADED || "No"}`);
 
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+// On Vercel the app is exported as a serverless function; locally we start a server
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+}
+
+module.exports = app;
